@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+	<h2>City Weather</h2>
+
+	<hr />
+	City: {{ city }}
+	<br />
+	Current main weather: {{ main }};
+	<br />
+	Description: '{{ description }};
+	<br />
+	Temperature: '{{ temperature }}
+
+	{#
+	<p>{{ qux }}</p>
+	{% for post in posts %}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+	
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+	#}
+{% endblock %}
+
